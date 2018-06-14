@@ -38,5 +38,11 @@ pipeline {
                 echo "Hello ${params.PERSON}"
             }
         }
+        post {
+                always {
+                    //generate cucumber reports
+                    cucumber '**/*.json'
+                }
+        }
     }
 }
