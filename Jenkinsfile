@@ -42,7 +42,7 @@ pipeline {
     post {
         always {
             //generate cucumber reports
-            cucumber '**/*.json'
+            cucumber 'cucumber-json-report.json'
         }
     }
 }
