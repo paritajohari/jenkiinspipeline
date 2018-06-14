@@ -37,12 +37,12 @@ pipeline {
                 echo 'Deploying....'
                 echo "Hello ${params.PERSON}"
             }
-        }
-        post {
-                always {
-                    //generate cucumber reports
-                    cucumber '**/*.json'
-                }
+        }        
+    }
+    post {
+        always {
+            //generate cucumber reports
+            cucumber '**/*.json'
         }
     }
 }
